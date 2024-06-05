@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    overflow: hidden;
+    position: relative;
+}
+
+.container {
+    text-align: center;
+    z-index: 1;
+    margin-top: 50px;
+}
+
+header h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #bb86fc;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    animation: fadeInDown 2s ease;
+}
+
+header h1 span {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+header h1 span:hover {
+    transform: rotate(360deg) scale(1.3);
+    color: #03dac6;
+    text-shadow: 0 0 10px #03dac6, 0 0 20px #03dac6, 0 0 30px #03dac6;
+}
+
+header h1 .space {
+    width: 20px; /* Ajuste o valor conforme necessário */
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    text-decoration: none;
+    background-color: #03dac6;
+    color: #121212;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: fadeInUp 2s ease;
+}
+
+.btn:hover {
+    background-color: #018786;
+    transform: translateY(-5px);
+    box-shadow: 0 0 10px #018786, 0 0 20px #018786, 0 0 30px #018786;
+}
+
+footer {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+footer p {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #757575;
+    animation: fadeInUp 2s ease;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    background: #121212;
+}
